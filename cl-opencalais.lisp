@@ -26,12 +26,12 @@
 
 (defpackage :cl-opencalais (:use :cl :drakma)
 	    (:export :enlighten
-		     :+opencalais-namespace+
+		     :*opencalais-namespace*
 		     :*opencalais-url*))
 
 (in-package :cl-opencalais)
 
-(defconstant +opencalais-namespace+ "http://s.opencalais.com/1/pred/"
+(defparameter *opencalais-namespace* "http://s.opencalais.com/1/pred/"
   "The XML namespace used to refer to Calais in RDF documents")
 
 (defparameter *opencalais-url* "http://api.opencalais.com/enlighten/rest/"

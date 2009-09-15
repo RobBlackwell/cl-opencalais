@@ -27,7 +27,7 @@
 (in-package :cl-user)
 
 (defpackage :cl-opencalais-asd
-  (:use :cl :asdf :drakma))
+  (:use :cl :asdf))
 
 (in-package :cl-opencalais-asd)
 
@@ -35,4 +35,5 @@
     :version "0.1"
     :author "Rob Blackwell"
     :description "A wrapper for the OpenCalais webservice API."
-    :components ((:file "cl-opencalais")))
+    :components ((:file "cl-opencalais"))
+    :depends-on (:drakma))
